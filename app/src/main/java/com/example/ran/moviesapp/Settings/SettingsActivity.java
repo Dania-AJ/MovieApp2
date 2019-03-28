@@ -57,8 +57,10 @@ public class SettingsActivity extends AppCompatActivity {
             inside onPreference we'll set the summary since every time the preference changes the summary should change*/
 
             //TODO 1: Get the SharedPreferences of the preference received in the method parameters
+            SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(preference.getContext());
 
             //TODO 2: Get the selected value corresponding to that preference from SahredPreferences
+            String selectedSortValue = sharedPreferences.getString(preference.getKey(), getString(R.string.best_movies_pref));
 
             //set the onChangeListener for this preference
             preference.setOnPreferenceChangeListener(this);

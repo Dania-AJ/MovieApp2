@@ -53,11 +53,16 @@ public class JsonUtils {
                     // Get a single movie at position i within the list of movies
                     JSONObject currentmovie = moviesArray.getJSONObject(i);
 
-                    //TODO 13: Get the poster of the movie from the current movie JSON object
+                    //TODO 12: Get the poster of the movie from the current movie JSON object
+                    String poster = currentmovie.optString(POSTER_KEY);
 
-                    MovieModel movie = new MovieModel(poster);
+                    if (!poster.equals("null")) { // Because sometimes the API itself returns the poster path value as "null"
 
-                    //TODO 14: Add the new movie object created above to the list of movies.
+                        MovieModel movie = new MovieModel(poster);
+
+                        //TODO 13: Add the new movie object created above to the list of movies.
+                        movies.add(movie);
+                    }
                 }
             } else {
                 movies = null;

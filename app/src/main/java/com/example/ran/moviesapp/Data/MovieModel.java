@@ -2,6 +2,7 @@ package com.example.ran.moviesapp.Data;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 /**
  * Created by Dania on 4/2/2018.

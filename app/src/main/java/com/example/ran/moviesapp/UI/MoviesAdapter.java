@@ -3,6 +3,7 @@ package com.example.ran.moviesapp.UI;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,6 +39,7 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
     @Override
     public void onBindViewHolder(MovieViewHolder holder, int position) {
         Picasso.with(context).load(movies.get(position).getMoviePoster()).into(holder.poster);
+        Log.i("msg", "link is " + movies.get(position).getMoviePoster());
     }
 
     @Override
