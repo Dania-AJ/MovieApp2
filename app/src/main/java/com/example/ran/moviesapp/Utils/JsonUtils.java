@@ -10,6 +10,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Dania on 4/2/2018.
@@ -23,7 +24,7 @@ public class JsonUtils {
     private static final String POSTER_KEY = "poster_path";
 
 
-    public static ArrayList<MovieModel> extractFeatureFromJson(String movieJSON) {
+    public static List<MovieModel> extractFeatureFromJson(String movieJSON) {
         // If the JSON string is empty or null, then return early.
         if (TextUtils.isEmpty(movieJSON)) {
             return null;
@@ -53,14 +54,13 @@ public class JsonUtils {
                     // Get a single movie at position i within the list of movies
                     JSONObject currentmovie = moviesArray.getJSONObject(i);
 
-                    //TODO 12: Get the poster of the movie from the current movie JSON object
                     String poster = currentmovie.optString(POSTER_KEY);
+
 
                     if (!poster.equals("null")) { // Because sometimes the API itself returns the poster path value as "null"
 
                         MovieModel movie = new MovieModel(poster);
 
-                        //TODO 13: Add the new movie object created above to the list of movies.
                         movies.add(movie);
                     }
                 }

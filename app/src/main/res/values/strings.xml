@@ -9,15 +9,19 @@
     <string name="settings">Settings</string>
     <string name="sort_by_pref_title">Sort By</string>
     <string name="app_name">Movies Collection</string>
+    <string name= "favorite_movies_pref_entry">Favorites</string>
+    <string name= "favorite_movies_pref">favorites</string>
 
     <string-array name="sort_by_pref_entry_array">
         <item>@string/best_movies_pref_entry</item>
         <item>@string/best_drama_movies_pref_entry</item>
+        <item>@string/favorite_movies_pref_entry</item>
     </string-array>
 
     <string-array name="sort_by_pref_values_array">
         <item>@string/best_movies_pref</item>
         <item>@string/best_drama_movies_pref</item>
+        <item>@string/favorite_movies_pref</item>
     </string-array>
     <string name="title_activity_settings">Settings</string>
 

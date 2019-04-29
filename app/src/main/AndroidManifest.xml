@@ -22,8 +22,12 @@
 
 
         <activity
-            android:name=".Settings.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+        android:name=".Settings.SettingsActivity"
+        android:label="@string/title_activity_settings" />
+
+        <activity
+            android:name=".UI.DetailsActivity"
+            android:label="Details" />
     </application>
 
 </manifest>
